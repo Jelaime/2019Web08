@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>sy8-1.html</title>
+	<style type="text/css">
+		form{
+			background-color: #424242;
+			width: 330px;
+			height: 670px;
+			padding: 15px 5px;
+			font-size: 13px;
+			color:#C4C0C0;
+		}
+		p{
+			font-size: 20px;
+			color: aliceblue;
+			margin: 5px 0 10px 0;
+		}
+		fieldset{
+			margin: 20px 0;
+			padding:13px 10px;
+		}
+		select{
+			width:100px;
+			height: 19px;
+		}
+		[type="text"]{
+			width: 90px;
+			height: 20px;
+			margin:10px 0 10px 0;
+		}
+		[name="shuliang"],[name="zhongliang"]{
+			width: 20px;
+			height: 20px;
+		}
+		[name="huowu"]{
+			width: 224px;
+			height: 20px;
+		}
+		[type="submit"]{
+			margin: 0 3px;
+		}
+		.crisp{
+			margin:10px 0 15px 0;
+			text-align: left;
+			padding-left: 10px;
+		}
+		.doinb{
+			width: 100px;
+			margin: auto;
+		}
+		.doinb input:hover{background-color:#FFF;}
+	</style>
+</head>
+
+<body>
+	<center>
+		<form action="#" method="post" name="form">
+			<p align="center">增加快递信息</p>
+			<fieldset>
+				<legend>发货单</legend>
+				<label>发货人：<input type="text" name="consignor"></label> <label>地址：<input type="text" name="address"></label><br/>
+				<label>电话：&nbsp;&nbsp;&nbsp;<input type="text" name="telephone"></label> <label>邮编：<input type="text" name="code"></label>
+			</fieldset>
+			<fieldset>
+				<legend>收货单</legend>
+				<label>收货人：<input type="text" name="consignee"></label> <label>地址：<input type="text" name="address"></label><br/>
+				<label>电话：&nbsp;&nbsp;&nbsp;<input type="text" name="telephone"></label> <label>邮编：<input type="text" name="code"></label><br/>
+				<div class="crisp">
+					<label>地区：&nbsp;&nbsp;
+						<select>
+							<option>北京</option>
+							<option>上海</option>
+							<option>广东</option>
+							<option>深圳</option>
+							<option>天津</option>
+							<option>浙江</option>
+						</select>
+					</label>
+				</div>
+				<div class="crisp">
+					<label>包装：</label>
+					<input type="checkbox" name="packing" value="纸箱" id="zhixiang"><label for="zhixiang">纸箱</label>
+					<input type="checkbox" name="packing" value="木箱" id="muxiang"><label for="muxiang">木箱</label>
+					<input type="checkbox" name="packing" value="快递袋" id="daizi"><label for="daizi">快递袋</label>
+					<input type="checkbox" name="packing" value="其他" id="other"><label for="other">其他</label>
+				</div>
+				<div class="crisp">
+					<label>付款方式：</label>
+					<input type="radio" name="money" value="现金" id="xianjin"><label for="xianjin">现金</label>
+					<input type="radio" name="money" value="支付宝" id="zhifubao"><label for="zhifubao">支付宝</label>
+					<input type="radio" name="money" value="网银" id="wangyin"><label for="wangyin">网银</label>
+					<input type="radio" name="money" value="ATM" id="atm"><label for="atm">ATM</label>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>货物信息</legend>
+				<label>货物名称：<input type="text" name="huowu"></label><br/>
+				<label>数量：<input type="text" name="shuliang"></label> <label>重量：<input type="text" name="zhongliang"></label> <label>发货时间：<input type="text" name="time"></label>
+			</fieldset>
+			<div class="doinb">
+				<input type="submit" name="submit" value="确定"><input type="submit" name="submit" value="取消">
+			</div>
+		</form>
+	</center>
+</body>
+</html>
